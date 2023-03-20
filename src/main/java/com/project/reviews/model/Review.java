@@ -28,6 +28,8 @@ public class Review {
     private String logoHref;
     private List<String> photos;
 
+    public Review() {}
+
     public Review(Integer id, String reviewId, String reviewFullText, String reviewText,
                   Integer numLikes, Integer numComments, Integer numShares, Integer rating,
                   String reviewCreatedOn, String reviewCreatedOnDate, Long reviewCreatedOnTime,
