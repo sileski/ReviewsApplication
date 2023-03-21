@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Filter Reviews</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <div class="row align-items-center" style="height: 100vh;">
+        <div class="mx-auto col-10 col-md-8 col-lg-6">
+            <form action="/reviews" method="get">
+                <div class="mb-4">
+                    <h3>Filter reviews</h3>
+                </div>
+                <div class="mb-3">
+                    <label for="selectRatingOrder" class="form-label">Order by rating:</label>
+                    <select class="form-select" id="selectRatingOrder" name="rating_order">
+                        <option value="highest_first">Highest First</option>
+                        <option value="lowest_first">Lowest First</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="selectMinimumRating" class="form-label">Minimum rating:</label>
+                    <select class="form-select" id="selectMinimumRating" name="min_rating">
+                        <option value=1>1</option>
+                        <option value=2>2</option>
+                        <option value=3>3</option>
+                        <option value=4>4</option>
+                        <option value=5>5</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="selectDateOrder" class="form-label">Order by date:</label>
+                    <select class="form-select" id="selectDateOrder" name="date_order">
+                        <option value="newest_first">Newest First</option>
+                        <option value="oldest_first">Oldest First</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="selectPrioritizeText" class="form-label">Prioritize by text:</label>
+                    <select class="form-select" id="selectPrioritizeText" name="prioritize_text">
+                        <option value=false>No</option>
+                        <option value=true>Yes</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Filter</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

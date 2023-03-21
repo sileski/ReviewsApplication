@@ -37,9 +37,9 @@ public class ReviewsService {
                 comparator = comparator.thenComparing(Review::getRating);
             }
 
-            if (dateOrder.equals("highest_first")) {
+            if (dateOrder.equals("newest_first")) {
                 comparator = comparator.thenComparing(review -> ZonedDateTime.parse(review.getReviewCreatedOnDate(), dateTimeFormatter), Comparator.reverseOrder());
-            } else if (dateOrder.equals("lowest_first")) {
+            } else if (dateOrder.equals("oldest_first")) {
                 comparator = comparator.thenComparing(review -> ZonedDateTime.parse(review.getReviewCreatedOnDate(), dateTimeFormatter));
             }
 
